@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "suo/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "suo"
+  spec.name          = "suo-dependless"
   spec.version       = Suo::VERSION
   spec.authors       = ["Nick Elser"]
   spec.email         = ["nick.elser@gmail.com"]
 
   spec.summary       = %q(Distributed locks (mutexes & semaphores) using Memcached or Redis.)
   spec.description   = %q(Distributed locks (mutexes & semaphores) using Memcached or Redis.)
-  spec.homepage      = "https://github.com/nickelser/suo"
+  spec.homepage      = "https://github.com/bernstein/suo"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -22,8 +22,6 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = "~> 2.0"
 
-  spec.add_dependency "dalli"
-  spec.add_dependency "redis"
   spec.add_dependency "msgpack"
 
   spec.add_development_dependency "bundler", "~> 1.5"
