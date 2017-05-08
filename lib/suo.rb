@@ -1,11 +1,6 @@
 require "securerandom"
 require "monitor"
 
-require "dalli"
-require "dalli/cas/client"
-
-require "redis"
-
 require "msgpack"
 
 require "suo/version"

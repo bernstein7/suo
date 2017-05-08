@@ -4,7 +4,6 @@ module Suo
       OK_STR = "OK".freeze
 
       def initialize(key, options = {})
-        options[:client] ||= ::Redis.new(options[:connection] || {})
         super
       end
 
